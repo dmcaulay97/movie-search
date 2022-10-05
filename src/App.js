@@ -8,7 +8,7 @@ import SearchIcon from './search.svg'
 
 //308e0e47
 
-const API_URL = 'http://www.omdbapi.com?apikey=308e0e47'
+const API_URL = 'https://www.omdbapi.com?apikey=308e0e47'
 
 const movie1 = {
     "Title": "The Big Lebowski",
