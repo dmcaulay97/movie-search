@@ -32,8 +32,15 @@ const App = () => {
     }
 
     useEffect(() => {
-        searchMovies('Marvel')
+        searchMovies('star wars')
     }, [])
+
+    const enterSearch = (e) => {
+        if (e.code === 'Enter') {
+            const searchButton = document.getElementById('searchButton')
+            searchButton.click()
+        }
+    }
 
     return (
         <div className='app'>
@@ -44,11 +51,13 @@ const App = () => {
                     placeholder='Search for movies'
                     value={searchTerm}
                     onChange={(e) => { setSearchTerm(e.target.value) }}
+                    onKeyPress={(e) => enterSearch(e)}
                 />
                 <img
                     src={SearchIcon}
                     alt="search"
                     onClick={() => { searchMovies(searchTerm) }}
+                    id="searchButton"
                 />
             </div>
 
